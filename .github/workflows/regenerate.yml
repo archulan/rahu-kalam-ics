@@ -33,6 +33,9 @@ jobs:
         run: |
           set -euo pipefail
           python rahu_kalam_ics.py --all --out docs
+          # Regenerate the subscribe page from the same preset table so it never
+          # drifts from the feeds.
+          python tools/build_index.py
 
       - name: Commit if changed
         run: |

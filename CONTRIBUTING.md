@@ -35,6 +35,16 @@ city.
    The suite lints the generated ICS and checks the astronomy against published
    golden fixtures.
 
+4. Regenerate the subscribe page so it lists your city:
+
+   ```
+   python tools/build_index.py
+   ```
+
+   The monthly CI job also runs this, but regenerating locally keeps the diff in
+   your pull request. The feeds themselves (`docs/*.ics`) are produced by CI; you
+   do not need to commit them.
+
 ## Guidelines
 
 - Keep the core dependency-free and importable. Standard library only.
