@@ -52,9 +52,11 @@ def render():
 
     owner, repo = _owner_repo()
 
-    # Indian cities all share Asia/Kolkata; everything else is grouped as diaspora.
+    # Group by home region via timezone: Sri Lanka (Asia/Colombo) and India
+    # (Asia/Kolkata) get their own sections; everything else is diaspora.
+    sri_lanka = [(s, c) for s, c in rk.CITIES.items() if c.tz == "Asia/Colombo"]
     india = [(s, c) for s, c in rk.CITIES.items() if c.tz == "Asia/Kolkata"]
-    diaspora = [(s, c) for s, c in rk.CITIES.items() if c.tz != "Asia/Kolkata"]
+    diaspora = [(s, c) for s, c in rk.CITIES.items() if c.tz not in ("Asia/Colombo", "Asia/Kolkata")]
 
     disclaimer = html.escape(
         "Different panchang traditions define sunrise differently (upper limb with "
@@ -144,6 +146,8 @@ def render():
   </section>
 
   <section>
+    <h2>Sri Lanka</h2>
+{sri_lanka}
     <h2>India</h2>
 {india}
     <h2>Diaspora</h2>
@@ -172,6 +176,7 @@ def render():
 </body>
 </html>
 """.format(
+        sri_lanka=_grid(sri_lanka, owner, repo),
         india=_grid(india, owner, repo),
         diaspora=_grid(diaspora, owner, repo),
         disclaimer=disclaimer,
