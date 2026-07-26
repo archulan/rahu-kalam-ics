@@ -1,0 +1,48 @@
+name: regenerate
+
+on:
+  schedule:
+    # 00:00 UTC on the 1st of each month. The 730-day horizon means feeds are
+    # always precomputed far ahead, so exact timing does not matter.
+    - cron: "0 0 1 * *"
+  workflow_dispatch:
+
+permissions:
+  # Needed for the default GITHUB_TOKEN to push the regenerated feeds back.
+  contents: write
+
+concurrency:
+  # Serialise a manual dispatch against the scheduled run so two pushes never
+  # race into a non-fast-forward rejection.
+  group: regenerate
+  cancel-in-progress: false
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Runs before the commit step and exits non-zero if any city fails, so a
+      # failure turns the job red and nothing partial is committed. The runner
+      # ships the system IANA tz database, so zoneinfo needs no extra package.
+      - name: Generate calendars
+        run: |
+          set -euo pipefail
+          python rahu_kalam_ics.py --all --out docs
+
+      - name: Commit if changed
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Regenerate calendars $(date -u +%F)"
+            git push
+          fi
