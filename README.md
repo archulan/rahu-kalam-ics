@@ -32,6 +32,8 @@ A few cities:
 
 | City | Subscribe URL |
 |------|---------------|
+| Colombo | `https://archulan.github.io/rahu-kalam-ics/colombo.ics` |
+| Jaffna | `https://archulan.github.io/rahu-kalam-ics/jaffna.ics` |
 | Chennai | `https://archulan.github.io/rahu-kalam-ics/chennai.ics` |
 | Bengaluru | `https://archulan.github.io/rahu-kalam-ics/bengaluru.ics` |
 | Mumbai | `https://archulan.github.io/rahu-kalam-ics/mumbai.ics` |

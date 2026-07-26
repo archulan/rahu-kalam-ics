@@ -34,7 +34,7 @@ one of eight equal segments of the daytime (sunrise → sunset), so its timing
 | G2 | Accuracy | Within ±2 min of NOAA civil-sunrise math; within ~±5 min of major panchang sites |
 | G3 | Zero cost, zero maintenance | Runs entirely on GitHub Actions + GitHub Pages free tier |
 | G4 | Trustworthy & auditable | Fully open source, no scraping, no tracking, deterministic output |
-| G5 | Universal coverage | Presets for ~30 cities; script handles any lat/lon on Earth |
+| G5 | Universal coverage | Curated city presets (Appendix C); script handles any lat/lon on Earth |
 
 ## 4. Non-goals
 
@@ -78,7 +78,7 @@ Inputs: `--city <preset>` OR (`--lat --lon [--tz] [--name]`), `--start`
 `--out` (default: `rahu-kalam-<slug>.ics`). Exit non-zero with a clear
 message on invalid input.
 
-**FR-2 (P0) — City presets.** ~30 built-in presets (Appendix C): slug →
+**FR-2 (P0) — City presets.** Built-in presets (Appendix C): slug →
 (lat to 4 d.p., lon east-positive to 4 d.p., IANA timezone). Contributors
 extend via PR.
 
@@ -271,8 +271,8 @@ rahu-kalam-ics/
 
 ## 15. Open questions (non-blocking; decide during M2)
 
-1. Final city list — top Indian metros only, or include the 8 diaspora
-   cities proposed in Appendix C from day one?
+1. Final city list — decided: Sri Lanka (Colombo, Jaffna), Tamil Nadu plus
+   the major Indian metros, and the 8 diaspora cities (see Appendix C).
 2. Event summary language — English only for v1, or localized summaries
    (e.g., ராகு காலம் / राहु काल) as a variant feed later?
 3. Repo/Pages naming — `rahu-kalam-ics` vs. a broader name if sibling feeds
@@ -309,12 +309,11 @@ eyeballing only; real output MUST use computed sunrise/sunset.
 | Saturday | 6 | 1 |
 | Sunday | 5 | 7 |
 
-## Appendix C — Proposed preset cities (~30)
+## Appendix C — Preset cities
 
-India: Chennai, Bengaluru, Hyderabad, Mumbai, Delhi, Kolkata, Pune,
-Ahmedabad, Coimbatore, Madurai, Tiruchirappalli, Visakhapatnam, Vijayawada,
-Kochi, Thiruvananthapuram, Mysuru, Jaipur, Lucknow, Chandigarh, Nagpur,
-Surat, Indore.
+Sri Lanka: Colombo, Jaffna.
+India: Chennai, Bengaluru, Mumbai, Delhi, Coimbatore, Madurai,
+Tiruchirappalli.
 Diaspora: Singapore, Kuala Lumpur, Dubai, London, New York, San Jose,
 Toronto, Sydney.
 Each preset PR must cite a coordinate source; lat/lon to 4 decimal places;

@@ -42,6 +42,8 @@ GOLDEN = [
     ("Asia/Kolkata", 28.6139, 77.2090, date(2026, 7, 21), "15:53", "17:36"),  # Delhi, Tue
     ("Asia/Kolkata", 12.9716, 77.5946, date(2026, 7, 19), "17:14", "18:50"),  # Bengaluru, Sun
     ("Asia/Kolkata", 28.6139, 77.2090, date(2026, 5, 25), "07:09", "08:52"),  # Delhi, Mon
+    ("Asia/Colombo", 6.9319, 79.8478, date(2026, 7, 25), "09:10", "10:44"),   # Colombo, Sat
+    ("Asia/Colombo", 9.6685, 80.0074, date(2026, 7, 25), "09:08", "10:42"),   # Jaffna, Sat
 ]
 
 
