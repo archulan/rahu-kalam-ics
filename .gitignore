@@ -1,0 +1,12 @@
+# Local dev virtualenv (pytest lives here; runtime stays zero-dependency)
+.venv/
+
+# Python bytecode caches
+__pycache__/
+*.py[cod]
+
+# pytest / tooling caches
+.pytest_cache/
+
+# OS cruft
+.DS_Store
