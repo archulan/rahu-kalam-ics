@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rahu Kalam calendar feeds</title>
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1a1a1a; --muted: #5a5a5a; --card: #f5f5f7;
+    --border: #e2e2e6; --accent: #7a3ea8; --accent-fg: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14141a; --fg: #ececf0; --muted: #a0a0aa; --card: #1e1e26;
+      --border: #2c2c38; --accent: #b98bdd; --accent-fg: #14141a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 860px; margin: 0 auto; padding: 2rem 1.1rem 4rem; }
+  h1 { font-size: 1.8rem; margin: 0 0 .3rem; }
+  h2 { font-size: 1.15rem; margin: 2rem 0 .8rem; }
+  .lead { color: var(--muted); margin: 0 0 1.5rem; }
+  ol { padding-left: 1.2rem; }
+  .note { color: var(--muted); font-size: .92rem; }
+  .grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: .7rem;
+  }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: .8rem .9rem; display: flex; flex-direction: column; gap: .5rem;
+  }
+  .city { font-weight: 600; }
+  .url {
+    font-size: .72rem; color: var(--muted); word-break: break-all;
+    background: transparent;
+  }
+  .actions { display: flex; gap: .5rem; align-items: center; margin-top: auto; }
+  button.copy, a.add {
+    font: inherit; font-size: .82rem; border-radius: 7px; cursor: pointer;
+    padding: .35rem .7rem; border: 1px solid var(--border); text-decoration: none;
+  }
+  button.copy { background: var(--accent); color: var(--accent-fg); border-color: transparent; }
+  a.add { background: transparent; color: var(--fg); }
+  .disclaimer {
+    margin-top: 2.5rem; padding: 1rem 1.1rem; border-left: 3px solid var(--accent);
+    background: var(--card); border-radius: 0 8px 8px 0; color: var(--muted);
+    font-size: .92rem;
+  }
+  footer { margin-top: 2.5rem; color: var(--muted); font-size: .88rem; }
+  a { color: var(--accent); }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Rahu Kalam calendar feeds</h1>
+  <p class="lead">Free, auto-updating Rahu Kalam feeds for your calendar. Timings
+  are computed from local sunrise and sunset, so they stay accurate every day of
+  the year. No app, no account, no tracking.</p>
+
+  <section>
+    <h2>How to subscribe</h2>
+    <ol>
+      <li>Copy your city's feed URL below.</li>
+      <li>In Google Calendar, open <strong>Other calendars &rarr; + &rarr; From URL</strong>,
+      paste the link, and choose <strong>Add calendar</strong>. (On Apple
+      Calendar, use <strong>Add</strong> to subscribe by URL.)</li>
+      <li>Done. The feed refreshes itself. You never re-import.</li>
+    </ol>
+    <p class="note">Subscribing keeps the calendar in sync as new days are added.
+    Downloading and importing a file is a one-time copy that will not update.</p>
+  </section>
+
+  <section>
+    <h2>India</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="city">Chennai</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/chennai.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/chennai.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/chennai.ics">Add</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="city">Bengaluru</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/bengaluru.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/bengaluru.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/bengaluru.ics">Add</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="city">Hyderabad</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/hyderabad.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/hyderabad.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/hyderabad.ics">Add</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="city">Mumbai</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/mumbai.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/mumbai.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/mumbai.ics">Add</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="city">Delhi</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/delhi.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/delhi.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/delhi.ics">Add</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="city">Kolkata</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/kolkata.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/kolkata.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/kolkata.ics">Add</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="city">Pune</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/pune.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/pune.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/pune.ics">Add</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="city">Ahmedabad</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/ahmedabad.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/ahmedabad.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/ahmedabad.ics">Add</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="city">Coimbatore</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/coimbatore.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/coimbatore.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/coimbatore.ics">Add</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="city">Madurai</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/madurai.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/madurai.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/madurai.ics">Add</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="city">Tiruchirappalli</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/tiruchirappalli.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/tiruchirappalli.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/tiruchirappalli.ics">Add</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="city">Visakhapatnam</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/visakhapatnam.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/visakhapatnam.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/visakhapatnam.ics">Add</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="city">Vijayawada</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/vijayawada.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/vijayawada.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/vijayawada.ics">Add</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="city">Kochi</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/kochi.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/kochi.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/kochi.ics">Add</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="city">Thiruvananthapuram</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/thiruvananthapuram.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/thiruvananthapuram.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/thiruvananthapuram.ics">Add</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="city">Mysuru</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/mysuru.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/mysuru.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/mysuru.ics">Add</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="city">Jaipur</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/jaipur.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/jaipur.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/jaipur.ics">Add</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="city">Lucknow</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/lucknow.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/lucknow.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/lucknow.ics">Add</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="city">Chandigarh</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/chandigarh.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/chandigarh.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/chandigarh.ics">Add</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="city">Nagpur</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/nagpur.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/nagpur.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/nagpur.ics">Add</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="city">Surat</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/surat.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/surat.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/surat.ics">Add</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="city">Indore</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/indore.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/indore.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/indore.ics">Add</a>
+        </div>
+      </div>
+    </div>
+
+    <h2>Diaspora</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="city">Singapore</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/singapore.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/singapore.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/singapore.ics">Add</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="city">Kuala Lumpur</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/kuala-lumpur.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/kuala-lumpur.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/kuala-lumpur.ics">Add</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="city">Dubai</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/dubai.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/dubai.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/dubai.ics">Add</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="city">London</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/london.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/london.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/london.ics">Add</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="city">New York</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/new-york.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/new-york.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/new-york.ics">Add</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="city">San Jose</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/san-jose.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/san-jose.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/san-jose.ics">Add</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="city">Toronto</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/toronto.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/toronto.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/toronto.ics">Add</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="city">Sydney</div>
+        <code class="url">https://archulan.github.io/rahu-kalam-ics/sydney.ics</code>
+        <div class="actions">
+          <button class="copy" data-url="https://archulan.github.io/rahu-kalam-ics/sydney.ics">Copy URL</button>
+          <a class="add" href="webcal://archulan.github.io/rahu-kalam-ics/sydney.ics">Add</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="disclaimer">Different panchang traditions define sunrise differently (upper limb with refraction vs centre of disk), which produces legitimate variations of a few minutes between sources. This project publishes astronomically computed timings, states its convention (civil sunrise, zenith 90.833 degrees), and takes no position on religious interpretation. It is not a substitute for a full panchang.</div>
+
+  <footer>
+    Open source (<a href="https://github.com/archulan/rahu-kalam-ics">GitHub</a>), MIT
+    licensed. Your city missing? Add it with a small pull request.
+  </footer>
+</main>
+<script>
+  for (const btn of document.querySelectorAll("button.copy")) {
+    btn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(btn.dataset.url);
+        const original = btn.textContent;
+        btn.textContent = "Copied";
+        setTimeout(() => { btn.textContent = original; }, 1400);
+      } catch (e) { /* clipboard unavailable; the URL is visible to copy manually */ }
+    });
+  }
+</script>
+</body>
+</html>
