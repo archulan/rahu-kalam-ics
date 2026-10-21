@@ -84,6 +84,7 @@ CITIES = {
     "san-jose": City("San Jose", 37.3382, -121.8863, "America/Los_Angeles"),
     "toronto": City("Toronto", 43.6532, -79.3832, "America/Toronto"),
     "sydney": City("Sydney", -33.8688, 151.2093, "Australia/Sydney"),
+    "pune": City("Pune", 18.5204, 73.8567, "Asia/Kolkata"),
 }
 
 
